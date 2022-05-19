@@ -16,11 +16,11 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g contentful-migration-tools
+$ npm install -g @gespenstt/contentful-migration-tools
 $ contentful-migration-tools COMMAND
 running command...
 $ contentful-migration-tools (--version)
-contentful-migration-tools/0.0.0 darwin-x64 node-v14.17.1
+@gespenstt/contentful-migration-tools/0.1.0 darwin-x64 node-v14.17.1
 $ contentful-migration-tools --help [COMMAND]
 USAGE
   $ contentful-migration-tools COMMAND
@@ -64,7 +64,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/reigncl/contentful-migration-tools/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/gespenstt/contentful-migration-tools/blob/v0.1.0/dist/commands/hello/index.ts)_
 
 ## `contentful-migration-tools hello world`
 
