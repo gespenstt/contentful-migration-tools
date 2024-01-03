@@ -24,6 +24,7 @@ export const createUpdateFile = (
       }
     }
   } catch (error) {
+    console.log('createUpdateFile error', error)
     if (writeLog) log(chalk.bgRedBright(error));
   }
 };

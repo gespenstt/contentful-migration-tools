@@ -30,22 +30,25 @@ export const getContent = (type: FILES_CONTENT): string => {
 };
 
 export const getPath = (
-  type: FILES_CONTENT,
+  type: FILES_CONTENT | undefined,
   element: string,
   elementType?: string,
-  epoch?: number,
+  epoch?: number | string,
 ): string => {
   let output = '';
 
   switch (type) {
     case FILES_CONTENT.TCT_SCRIPT:
-      output = `/src/${elementType}/${epoch}-${element}-content-type.js`;
+      output = `/src/${elementType}/${element}/${epoch}-${element}-content-type.js`;
       break;
     case FILES_CONTENT.TCT_EDITED_SCRIPT:
-      output = `/src/${elementType}/${epoch}-${element}-content-type--edited.js`;
+      output = `/src/${elementType}/${element}/${epoch}-${element}-content-type--edited.js`;
       break;
     case FILES_CONTENT.TCT_REF_SCRIPT:
       output = `/content-types/${element}-content-type.js`;
+      break;
+    default:
+      output = `/src/${elementType}/${element}`;
       break;
   }
   return output;
@@ -67,7 +70,7 @@ export const parseContent = (
     output = output.replace(/{type}/g, elementType);
   }
   if (epoch) {
-    output = output.replace(/{epoch}/g, epoch);
+    output = output.replace(/{epoch}/g, epoch?.toString());
   }
 
   return output;

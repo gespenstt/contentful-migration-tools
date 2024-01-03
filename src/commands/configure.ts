@@ -25,7 +25,7 @@ export default class Configure extends Command {
 
       checkAndCreateFolder(migrationFolder);
       checkAndCreateFolder(`${migrationFolder}/src`);
-      checkAndCreateFolder(`${migrationFolder}/src/content-types`);
+      checkAndCreateFolder(`${migrationFolder}/content-types`);
       createUpdateFile(`${migrationFolder}/content-types/.gitkeep`, '', true, false);
       checkAndCreateFolder(`${migrationFolder}/src/atoms`);
       createUpdateFile(`${migrationFolder}/src/atoms/.gitkeep`, '', true, false);
